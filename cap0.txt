@@ -1,0 +1,34 @@
+== Capítulo 0 ==
+
+=== Porque aprender a programar? ===
+
+A razão fundamental, que nos motivou a produzir este tutorial, é uma só: programar é divertido. É claro que nem todo mundo vai concordar com isso, assim como muita gente não acha graça nenhuma em jogar xadrez ou explorar cavernas. Ao contrário do xadrez e da espeleologia, a programação também é uma habilidade que tem forte demanda no mercado de trabalho.
+
+Mas a dura realidade é que somente com centenas ou milhares de horas de experiência programando é que você estará apto a incluir essa disciplina em seu currículo e se dar bem em uma entrevista de emprego. Portanto nosso objetivo aqui é bem mais modesto do que transformar você em um programador profissional. O que estamos te oferecendo é uma introdução suave a esse tópico fascinante. Ao final, esperamos que você descubra se tem a vocação e a motivação necessárias para criar softwares, como hobby ou profissão.
+
+Antes de começar, apenas um aviso: o prazer de construir um programa pode causar dependência psicológica. Não é apenas por dinheiro que programadores do mundo inteiro varam noites escrevendo código.
+
+=== Material necessário ===
+
+Para acompanhar esse tutorial você precisará de um computador qualquer onde tenha instalado um interpretador da linguagem Python. Em quase todas as versões modernas de Linux e Mac OS X o interpretador Python já vem instalado (experimente abrir um console e digitar "python"). Na página http://www.python.org/download/ você encontra links para baixar o interpretador adequado para o seu computador. No caso do Windows, o instalador .msi da versão atual do Python tem cerca de 11 MB. 
+
+=== Porquê Python ===
+
+Toda programação de computadores é feita através de uma ou mais linguagens de programação, portanto não é possível aprender a programar sem aprender ao menos uma linguagem de programação. Nossa meta não é mostrar como se programa em uma linguagem específica, mas sim como se programa de uma forma geral. Ou seja, a linguagem para nós será um veículo, e não o destino. Mesmo assim, pensamos bastante antes de escolher uma linguagem para este tutorial, e optamos por Python.
+
+Centenas de linguagens já foram criadas desde que o computador eletrônico foi inventado nos anos 40. Algumas já são línguas mortas. Outras, como C++ e Java, são peças fundamentais no desenvolvimento da economia digital. No entanto, a complexidade dessas duas linguagens nos motivou a descartá-las, e focalizar o universo das chamadas linguagens de "''scripting''", que são mais simples e se prestam a um estilo de programação exploratória, mais sintonizado com um tutorial como esse.
+
+As três linguagens de ''scripting'' mais populares atualmente são !PHP, !JavaScript e !VBScript. Todas são utilizadas na construção de ''web-sites'' dinâmicos, mas praticamente não têm aplicação fora desse domínio, e por isso foram descartadas. É que, embora seja nosso objetivo abordar também esse tópico, achamos que é complexo demais para começar, especialmente devido à dificuldade de se diagnosticar erros de programação em páginas dinâmicas. 
+
+Escolhemos Python porque é uma linguagem muito versátil, usada não só no desenvolvimento Web mas em muitos outros tipos de aplicação. Python roda nos servidores de mega-sites como Google e YouTube, nos clusters de computação gráfica da Industrial Light & Magic, em laboratórios da NASA e da farmacêutica AstraZeneca, e em games como Civilization IV e EVE-Online. O nome "Python" é uma homenagem ao grupo humorístico inglês Monty Python, adorado por ''geeks'' de todo o mundo, mas pela pequena amostra de usuários citados, não é uma linguagem de brinquedo.
+
+Apesar de sua sintaxe simples e clara, Python oferece os seguintes recursos disponíveis também em linguagens mais complicadas como Java e C++:
+
+    * programação orientada a objetos (incluindo herança múltipla, conceito apenas parcialmente presente em Java)
+    * exceções, um moderno mecanismo para o tratamento de erros
+    * módulos, uma forma inteligente de acessar e organizar código a ser reutilizado
+    * coleta de lixo automática, sistema que elimina os erros causados pelo acúmulo de dados inúteis na memória do computador (característica presente também em Java, mas não em C++)
+    * recursos avançados de manipulação de textos, listas e outras estruturas de dados
+    * possibilidade de executar o mesmo programa sem modificações em várias plataformas de ''hardware'' e sistemas operacionais (difícil de se conseguir em C++)
+
+Em resumo, Python nos oferece uma sintaxe tão simples quanto PHP ou VBScript, mas é mais versátil do que elas. E permite explorar vários recursos de Java e C++ de uma forma mais acessível. Por esses motivos acreditamos que seja a melhor escolha para quem quer começar a programar hoje.

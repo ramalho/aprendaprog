@@ -1,6 +1,6 @@
-== Capítulo 4 ==
-
-=== Orçamentos, pousos lunares e tratamento de erros ===
+=============================================================
+Capítulo 4: Orçamentos, pousos lunares e tratamento de erros
+=============================================================
 
 O capítulo anterior terminou com uma questão no ar. Após estudarmos todas as formas de se usar o comando if, restou o desafio de usar um bloco elif para consertar um pequeno defeito no programa {{{despdom2.py}}}. O bug se manifesta quando os gastos de Ana e Bia são iguais. Nesse caso, o programa escreve na tela:
 

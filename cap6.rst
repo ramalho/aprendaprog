@@ -1,6 +1,6 @@
-== Capítulo 6 ==
-
-=== Perca o medo do servidor Apache e do protocolo CGI ===
+===============================================================
+Capítulo 6: Perca o medo do servidor Apache e do protocolo CGI
+===============================================================
 
 É hora de colocar em prática os nossos conhecimentos de funções e módulos para criar nosso primeiro programa para a Internet: o Calendário Dinâmico. Uma vez instalado em um servidor web, ele exibirá o calendário do mês atual com o dia de hoje assinalado. Ao final desse capítulo você terá construído seus primeiros programas CGI em linguagem Python. Mas para chegar lá, é preciso entender o funcionamento de um CGI, e conhecer como se dá a operação básica de um servidor HTTP.
 Quem é quem do HTTP

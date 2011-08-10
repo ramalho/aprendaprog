@@ -1,8 +1,8 @@
-== Capítulo 1 ==
+=========================================
+Capítulo 1: Abrindo e fechando o console
+=========================================
 
-=== Abrindo e fechando o interpretador ===
-
-A melhor forma de aprender a programar é usando um interpretador em modo interativo. Dessa forma você pode digitar comandos linha por linha e observar a cada passo como o computador interpreta e executa esses comandos. Para fazer isso em Python, há duas maneiras: 
+A melhor forma de aprender a programar é usando o console de um interpretador em modo interativo. Dessa forma você pode digitar comandos linha por linha e observar a cada passo como o computador interpreta e executa esses comandos. Para fazer isso em Python, há duas maneiras: 
 
 1-executar o interpretador em modo texto (chamado "Python (command line)" no Windows, ou simplesmente {{{python}}} no Linux)
 2-usar o IDLE, que é um ambiente baseado em janelas. 
@@ -22,7 +22,8 @@ O símbolo "{{{>>>}}}" exibido pelo interpretador é o que os americanos chamam 
 
 Para sair do interpretador você pode fechar a janela do IDLE, ou teclar {{{[CTRL]+[D]}}} (no IDLE ou no interpretador em UNIX) ou {{{[CTRL]+[Z]}}} e então {{{[ENTER]}}} (no interpretador DOS).
 
-=== Uma calculadora melhor ===
+Uma calculadora melhor
+=======================
 
 Vamos então aproveitar a deixa e escrever algo. Experimente escrever uma expressão aritmética bem simples, como {{{2+2}}}:
 
@@ -113,41 +114,36 @@ Ao contrário do que você aprendeu na escola, aqui os símbolos [] e {} não se
 
 '''DICA:''' Se você escrever algo que o interpretador não reconhece, verá na tela uma mensagem de erro. Não crie o mau hábito de ignorar essas mensagens, mesmo que elas pareçam difíceis de entender num primeiro momento. A única vantagem de cometer erros é aprender com eles, e se a preguiça o impedir de ler as mensagens, seu aprendizado será bem mais lento.
 
-Veja aqui como decifrar as mensagens de erro do Python.
+.. admonition:: Como decifrar as mensagens de erro do Python.
 
-==== Como ler uma mensagem de erro ====
+  A dura realidade é que um programador profissional passa boa parte de sua vida caçando erros, e por isso é fundamental saber extrair o máximo de informações das mensagens resultantes.
 
-A dura realidade é que um programador profissional passa boa parte de sua vida caçando erros, e por isso é fundamental saber extrair o máximo de informações das mensagens resultantes.
+  A essa altura você talvez já tenha provocado um erro para ver o que acontece. Vamos fazer isso agora, e aprender a ler as mensagens resultantes. Pode parecer perda de tempo, mas é importantíssimo saber interpretar as mensagens de erro porque a melhor forma de aprender a programar é experimentando, e ao experimentar você certamente vai provocar muitos erros.
 
-A essa altura você talvez já tenha provocado um erro para ver o que acontece. Vamos fazer isso agora, e aprender a ler as mensagens resultantes. Pode parecer perda de tempo, mas é importantíssimo saber interpretar as mensagens de erro porque a melhor forma de aprender a programar é experimentando, e ao experimentar você certamente vai provocar muitos erros.
+  Como exemplo, vamos digitar uma expressão aritmética sem sentido::
 
-Como exemplo, vamos digitar uma expressão aritmética sem sentido:
+    >>> 7 + / 2
+      File "<stdin>", line 1
+        7 + / 2
+            ^
+    SyntaxError: invalid syntax
+    >>> 
+    
+  O interpretador indica o local de erro em vermelho no IDLE, ou com o sinal ^ no console. Nos dois casos a última linha contém as informações mais importantes: {{{SyntaxError: invalid syntax}}}. A primeira parte, {{{SyntaxError}}} é o tipo do erro, e após o sinal de ":" vem a descrição: erro de sintaxe inválida.
 
-{{{
->>> 7 + / 2
-  File "<stdin>", line 1
-    7 + / 2
-        ^
-SyntaxError: invalid syntax
->>> 
-}}}
+  No console a primeira linha da mensagem de erro indica em a linha do seu código onde ocorreu o problema. No modo interativo essa informação pouco útil, mas quando fizermos programas extensos será muito bom saber exatamente em qual linha está a falha. 
+  Agora vamos provocar um outro tipo de erro::
 
-O interpretador indica o local de erro em vermelho no IDLE, ou com o sinal ^ no console. Nos dois casos a última linha contém as informações mais importantes: {{{SyntaxError: invalid syntax}}}. A primeira parte, {{{SyntaxError}}} é o tipo do erro, e após o sinal de ":" vem a descrição: erro de sintaxe inválida.
+    >>> 1.5/0
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    ZeroDivisionError: float division
+    >>> 
 
-No console a primeira linha da mensagem de erro indica em a linha do seu código onde ocorreu o problema. No modo interativo essa informação pouco útil, mas quando fizermos programas extensos será muito bom saber exatamente em qual linha está a falha. 
-Agora vamos provocar um outro tipo de erro:
+  Novamente, a parte mais importante é a última linha, que nesse caso é bem fácil de entender: {{{ZeroDivisionError: float division}}}, ou "erro de divisão por zero em divisão de ponto-flutuante".
 
-{{{
->>> 1.5/0
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ZeroDivisionError: float division
->>> 
-}}}
-
-Novamente, a parte mais importante é a última linha, que nesse caso é bem fácil de entender: {{{ZeroDivisionError: float division}}}, ou "erro de divisão por zero em divisão de ponto-flutuante".
-
-=== Conversor de dólares ===
+Conversor de dólares
+=====================
 
 Digamos que você tem uma loja de discos importados, e precisa constantemente converter dólares em reais. O valor do dólar para venda em 20/05/1999 é de 1.686. Para converter US$9,95 e US$11,95 em reais você pode digitar:
 
@@ -195,7 +191,8 @@ E se a cotação do dólar mudou para 1.61? Basta armazenar o novo número e ref
 
 Você precisa digitar a linha mais longa de novo. No IDLE, clique sobre a linha que digitamos no exemplo anterior e tecle {{{[ENTER]}}}. A linha será reproduzida na última deixa, e bastará um novo {{{[ENTER]}}} para processá-la. No console, teclando a seta para cima você acessa o histórico de comandos. 
 
-=== Tabela de preços em dólares e reais ===
+Tabela de preços em dólares e reais
+====================================
 
 Agora vamos mostrar como o interpretador Python é muito mais poderoso que uma calculadora. Imagine que em sua loja de discos importados você tem um balcão de ofertas com discos de $4 até $9. Se quisesse fazer uma tabela de preços em reais você poderia digitar:
 
@@ -315,5 +312,3 @@ Resumindo o que foi feito até aqui, com apenas duas linhas de código em Python
 }}}
 
 Parabéns, você acaba de construir seu primeiro programa!
-
-

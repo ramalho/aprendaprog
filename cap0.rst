@@ -1,6 +1,6 @@
-== Capítulo 0 ==
-
-=== Porque aprender a programar? ===
+=========================================
+Capítulo 0: Porque aprender a programar?
+=========================================
 
 A razão fundamental, que nos motivou a produzir este tutorial, é uma só: programar é divertido. É claro que nem todo mundo vai concordar com isso, assim como muita gente não acha graça nenhuma em jogar xadrez ou explorar cavernas. Ao contrário do xadrez e da espeleologia, a programação também é uma habilidade que tem forte demanda no mercado de trabalho.
 
@@ -8,11 +8,17 @@ Mas a dura realidade é que somente com centenas ou milhares de horas de experi�
 
 Antes de começar, apenas um aviso: o prazer de construir um programa pode causar dependência psicológica. Não é apenas por dinheiro que programadores do mundo inteiro varam noites escrevendo código.
 
-=== Material necessário ===
+Material necessário
+====================
 
-Para acompanhar esse tutorial você precisará de um computador qualquer onde tenha instalado um interpretador da linguagem Python. Em quase todas as versões modernas de Linux e Mac OS X o interpretador Python já vem instalado (experimente abrir um console e digitar "python"). Na página http://www.python.org/download/ você encontra links para baixar o interpretador adequado para o seu computador. No caso do Windows, o instalador .msi da versão atual do Python tem cerca de 11 MB. 
+Para acompanhar esse tutorial você precisará de um computador qualquer onde tenha instalado um interpretador da linguagem Python. Em quase todas as versões modernas de Linux e Mac OS X o interpretador Python já vem instalado (experimente abrir um console e digitar "python"). Na página http://www.python.org/download/ você encontra links para baixar o interpretador adequado para o seu computador. No caso do Windows, o instalador .msi da versão atual do Python tem cerca de 11 MB. OBS. Este tutorial foi escrito em 1998.
 
-=== Porquê Python ===
+.. todo::
+
+    Incluir dicas sobre as versões 2 e 3, e atualizar o tamanho do download no para acima. 
+
+Porquê Python
+==============
 
 Toda programação de computadores é feita através de uma ou mais linguagens de programação, portanto não é possível aprender a programar sem aprender ao menos uma linguagem de programação. Nossa meta não é mostrar como se programa em uma linguagem específica, mas sim como se programa de uma forma geral. Ou seja, a linguagem para nós será um veículo, e não o destino. Mesmo assim, pensamos bastante antes de escolher uma linguagem para este tutorial, e optamos por Python.
 

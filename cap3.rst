@@ -1,6 +1,6 @@
-== Capítulo 3 ==
-
-=== Introdução ===
+==================================================
+Capítulo 3: Do console para o editor de programas
+==================================================
 
 Depois de dois capítulos bem básicos, é hora de engatar uma segunda e começar a criar programas mais dignos desse nome. Não vamos desprezar o que fizemos até aqui, digitando diretamente na deixa do interpretador Python. Ao contrário: tenha sempre em mente que você pode usá-lo para esclarecer aquela dúvida rápida ou mesmo localizar um bug escondido em um sistema complexo. A maioria das outras linguagens não oferece um ambiente para execução imediata de comandos como o Python. Uma exceção famosa é a linguagem Logo, onde o interpretador interativo serve justamente para facilitar a aprendizagem da programação através da exploração e experimentos.
 

@@ -1,6 +1,6 @@
-== Capítulo 5 ==
-
-=== O segredo dos objetos-função: saiba como criar seus próprios comandos ===
+=========================================
+Capítulo 5: O segredo dos objetos-função
+=========================================
 
 O simulador de alunissagem {{{lunar.py}}}, apresentado no último capítulo, tem 50 linhas de código. É um jogo bem simples, mas foi nosso exemplo mais extenso até o momento. Em termos de programação profissional, trata-se de um programa bem pequeno. No mundo real, softwares modestos têm milhares de linhas de código, e essa contagem chega aos milhões quando se fala de grandes aplicativos como o Microsoft Word ou o sistema operacional Linux. Ao se trabalhar com programas maiores, é fundamental poder dividir o trabalho em módulos, em vez de criar uma solução "monolítica" como a do nosso lunar.py, onde o programa inteiro está expresso em uma única sequência de comandos. A partir de agora, vamos ver porque e como modularizar nossos programas, utilizando os conceitos de função, objeto, classe, módulo e pacote.
 

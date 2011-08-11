@@ -1,0 +1,3 @@
+#!/bin/bash
+mv _build/epub/AprendaaProgramar.epub aprendaprog.epub
+mv _build/latex/AprendaaProgramar.pdf aprendaprog.pdf

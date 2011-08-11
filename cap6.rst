@@ -9,7 +9,7 @@ A Web é construída a partir de duas tecnologias fundamentais: a linguagem HTML
 
 O segundo pilar da Web é o HTTP, ou Hypertext Transport Protocol - protocolo de transporte de hipertexto. Esse é o conjunto de comandos e regras que define como deve ser a comunicação entre um browser (como o Internet Explorer ou o Mozilla) e um servidor HTTP (como o Apache ou o Interner Information Server). A expressão "servidor HTTP" pode significar duas coisas: o software que serve páginas via HTTP, ou o computador onde esse software está instalado. No mundo Unix, softwares servidores são chamados de "daemons", e a sigla HTTPd descreve um "HTTP daemon" genérico. Essa é a sigla que vamos usar para diferenciar o software do hardware.
 
-.. image:: _static/img_06_01.gif
+.. image:: _static/img_06_01.png
 
 A relação entre um browser e um HTTPd é descrita pelos computólogos como "cliente-servidor". Isso significa que a interação entre esses dois softwares sempre parte do browser, que é o cliente. O servidor não tem nenhuma iniciativa, limitando-se a responder aos comandos enviados pelo cliente.
 
@@ -33,7 +33,7 @@ No Windows, o Apache vem com um instalador bem amigável. Nossa única recomenda
 
 Uma vez terminada a instalação, você deve rodar o servidor, acionando o programa "Start Apache" que foi instalado em Iniciar > Programas > Apache Web Server. Isso faz abrir uma janela DOS com uma mensagem como "Apache/1.3.9 (Win32) running...". Não feche esta janela, pois isso encerrará a execução do servidor. Agora você pode ver se está tudo certo digitando essa URL mágica em seu browser: http://127.0.0.1/. Se a instalação foi bem sucedida, você verá uma página com o texto: "It Worked! The Apache Web Server is Installed on this Web Site!" (Funcionou! O servidor Apache está instalado neste Web Site!). (Figura 1).
 
-.. image:: _static/img_06_02.gif
+.. image:: _static/img_06_02.png
 
 Vale a pena saber que o endereço 127.0.0.1 tem um significado especial. Os criadores da Internet reservaram esse número IP para o "loopback", ou seja, testes de conexão de uma máquina com ela mesma. Em outras palavras, o endereço 127.0.0.1 sempre se refere à maquina onde você está, que é conhecida também pelo nome "localhost". Se o seu micro estiver bem configurado, a URL http://localhost/ deve ter o mesmo efeito. Caso contrário, utilize o número IP e vamos em frente.
 
@@ -192,7 +192,7 @@ Um relógio que se atualiza
 
 É um pouco frustrante acessar uma página que mostra a hora certa, com precisão de segundos, mas fica parada no tempo (Figura 2). Para atualizar os segundos, você tem que acionar o comando de "reload" do seu browser (Exibir ¡ Atualizar ou [F5] no Internet Explorer; View ¡ Reload ou [Control][R] no Navigator). Nossa página parece um relógio quebrado, que só mostra a hora certa quanto chacoalhado.
 
-.. image:: _static/img_06_03.gif
+.. image:: _static/img_06_03.png
 
 O ideal seria que o servidor atualizasse a página que está no seu browser a cada segundo. Infelizmente, isso é impossível. Como já dissemos, o protocolo HTTP é do tipo cliente-servidor, e isto quer dizer que a iniciativa de toda interação fica do lado do cliente. Não há como o servidor por conta própria enviar uma nova página sem que ela seja antes solicitada pelo navegador. Esta é uma limitação importante do protocolo HTTP que você precisa ter em mente ao bolar seus programas CGI.
 
@@ -301,7 +301,7 @@ Protótipo melhorado
 
 Agora que colocamos o calendário básico para funcionar, está na hora de melhorar sua apresentação. Vamos deixar de lado o recurso preguiçoso do tag <PRE> e colocar os dias do mês dentro de uma tabela construída em HTML (Figura 3). Aproveitando outros recursos daquela linguagem, vamos também colorir os finais de semana e assinalar o dia de hoje. Você encontra o programa ``calendin2.py`` na listagem abaixo.
 
-.. image:: _static/img_06_04.gif
+.. image:: _static/img_06_04.png
 
 ::
 

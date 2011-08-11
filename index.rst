@@ -3,10 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+====================
 Aprenda a Programar
 ====================
 
-Contents:
+**Downloads**
+
+PDF: http://ramalho.pro.br/aprendaprog/aprendaprog.pdf
+
+EPUB: http://ramalho.pro.br/aprendaprog/aprendaprog.pdf
+
+
+Para ler na tela
+=================
 
 .. toctree::
    :maxdepth: 2
@@ -22,7 +31,7 @@ Contents:
 Pendências
 ===========
 
-.. todolist::   
+.. todolist::
 
 Índices e tabelas
 ==================

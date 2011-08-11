@@ -106,10 +106,12 @@ Agora vamos fazer uma pequena mudança no programa egotrip que terá um grande e
 Salve com ``[CTRL]+[S]`` e rode o programa novamente. Tecle ``[F5]`` para rodar no IDLE, ou siga esses passos para testar no DOS:
 
    * ``[ALT]+[TAB]`` até voltar ao ''prompt'' do DOS
-   * ``[↑]`` (seta para cima) para repetir o comando ``..\python egotrip.py``
+   * ``[`` |uparrow| ``]`` (seta para cima) para repetir o comando ``..\python egotrip.py``
    * ``[ENTER]`` para executar o comando.
 
-10 entre 10 programadores que usam a plataforma Windows têm muita prática com a sequência ``[ALT]+[TAB]``, ``[↑]``, ``[ENTER]``. Logo, logo, em sua primeira sessão de caça a um bug, você terá oportunidade de praticar bastante.
+.. |uparrow| image:: _static/uparrow.png
+
+10 entre 10 programadores que usam a plataforma Windows têm muita prática com a sequência ``[ALT]+[TAB]``, ``[`` |uparrow| ``]``, ``[ENTER]``. Logo, logo, em sua primeira sessão de caça a um bug, você terá oportunidade de praticar bastante.
 
 Nesse caso, é interessante testar o programa tanto no IDLE quanto na linha de comando. Você verá que os resultados são bem diferentes. Experimente e tente explicar porquê.
 
@@ -172,9 +174,9 @@ Linha 4
 
 Linha 5
    O mesmo comando é usado para guardar os gastos de Bia na variável bia.
-   
+
 Linha 6
-  Aqui é calculado o total. Note o uso da função ''float''. Acontece que a função ``raw_input`` não retorna números, e sim ''strings''. Como vimos no capítulo anterior, o operador "+" tem efeitos diferentes quando aplicado a ''strings''; em vez de somar, ele concatena ou junta os textos. Nesse caso, se ana é 10 e bia é 20, ana + bia seria 1020. Para realizar a soma, precisamos antes transformar as ''strings'' em números, o que é feito pela funções ''float'' ou ''int''. Nesse caso, usamos float porque não vamos nos limitar a aceitar números inteiros.
+  Aqui é calculado o total. Note o uso da função ''float''. Acontece que a função ``raw_input`` não retorna números, e sim ''strings''. Como vimos no capítulo anterior, o operador "+" tem efeitos diferentes quando aplicado a ''strings''; em vez de somar, ele concatena ou junta os textos. Nesse caso, se ``ana`` é ``'10'`` e ``bia`` é ``'20'``, ``ana + bia`` seria ``'1020'``. Para realizar a soma, precisamos antes transformar as ''strings'' em números, o que é feito pelas funções ``float`` ou ``int``. Nesse caso, usamos ``float`` porque não vamos nos limitar a aceitar números inteiros.
 
 Linha 7
   O total é exibido, com o auxílio do operador % que insere o valor na posição assinalada pelos caracteres %s dentro da mensagem. O código %s faz com que Python transforme o número em ''string''.

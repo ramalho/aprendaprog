@@ -38,7 +38,7 @@ Você tem que digitar as aspas para evitar um erro. As aspas podem ser 'simples'
     'Fulano'
     >>>
 
-Antes havíamos criado a variável ``d`` referindo-se à cotação do dólar, e no capítulo anterior também criamos uma variável chamada ``lista``, contendo uma lista de valores. Agora criamos a variável ``eu`` para se referir ao seu nome. Estes são exemplos de três tipos de dados que Python é capaz de processar: número de ponto flutuante, lista de valores, e texto. 
+Antes havíamos criado a variável ``d`` referindo-se à cotação do dólar, e no capítulo anterior também criamos uma variável chamada ``lista``, contendo uma lista de valores. Agora criamos a variável ``eu`` para se referir ao seu nome. Estes são exemplos de três tipos de dados que Python é capaz de processar: número de ponto flutuante, lista de valores, e texto.
 
 Você pode saber o tipo de uma variável ou estrutura de dados usando a função ``type``. Veja estes exemplos::
 
@@ -48,7 +48,7 @@ Você pode saber o tipo de uma variável ou estrutura de dados usando a função
     <type 'str'>
     >>> type(d)
     <type 'float'>
-    >>> 
+    >>>
 
 Python acaba de nos dizer que a variável ``eu`` refere-se a um objeto do tipo ``str``, uma abreviatura de "string" (basicamente o computador encara um texto como uma cadeia de caracteres). E a variável ``d`` aponta para um objeto do tipo ``float``, ou "número de ponto-flutuante", como já vimos antes.
 
@@ -145,7 +145,7 @@ Veja o que aconteceu: Python substituiu a marca ``%f`` pelo valor da variável `
     Um dólar vale 1.902000 real e um real vale 0.525762 dólar.
     >>>
 
-Note que os valores ``d`` e ``1/d`` estão entre parênteses. Isso é obrigatório quando queremos passar mais de um valor para o operador ``%`` (uma sequência de valores entre parênteses é um "``tuplo``", um tipo especial de lista que explicaremos em um outro capítulo).
+Note que os valores ``d`` e ``1/d`` estão entre parênteses. Isso é obrigatório quando queremos passar mais de um valor para o operador ``%`` (uma sequência de valores entre parênteses é uma "tupla", um tipo especial de sequência que explicaremos em um outro capítulo).
 
 O símbolo ``%f`` serve para informar a Python que o valor a ser inserido naquela posição é um '``float``'. Se você quiser limitar o número de casas após o ponto decimal, basta usar um formato como esse::
 
@@ -196,7 +196,7 @@ Entendendo melhor o for
 
 Como você percebeu, no comando ``for`` tudo aquilo que aparece após os sinal ":" é repetido várias vezes, uma vez para cada item da lista de valores indicada após a palavra ``in``. Mas os comandos a serem repetidos podem ser vários, e na maioria das vezes não são escritos na mesma linha que o ``for``, como temos feito, mas sim em linhas subseqüentes.
 
-O comando ``for`` é algo que chamamos de "estrutura de controle", que serve para determinar a forma de execução de um comando ou de uma seqüência de comandos, às vezes chamada de um "bloco". Em outras linguagens, os blocos são delimitados por marcadores especiais. Java, Perl e C++ usam os sinais { e } para este fim. Pascal e Delphi usam as palavras ``BEGIN`` e ``END``. Além desses marcadores exigidos pelas linguagens, os programadores usam também o recurso da endentação, ou seja, o recuo em relação à margem esquerda, para tornar mais fácil a visualização da estrutura do programa. Veja este exemplo em Perl::
+O comando ``for`` é algo que chamamos de "estrutura de controle", que serve para determinar a forma de execução de um comando ou de uma seqüência de comandos, às vezes chamada de um "bloco". Em outras linguagens, os blocos são delimitados por marcadores especiais. Java, Perl e C++ usam os sinais { e } para este fim. Pascal e Delphi usam as palavras ``BEGIN`` e ``END``. Além desses marcadores exigidos pelas linguagens, os programadores usam também o recurso da endentação, ou seja, o recuo em relação à margem esquerda, para tornar mais fácil a visualização da estrutura do programa. Veja este exemplo em Perl:
 
 .. code-block:: perl
 

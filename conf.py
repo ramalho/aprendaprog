@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Aprenda a Programar'
-copyright = u'2011, Luciano Ramalho'
+copyright = u'1988-2011, Luciano Ramalho'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -226,7 +226,7 @@ man_pages = [
 epub_title = u'Aprenda a Programar'
 epub_author = u'Luciano Ramalho'
 epub_publisher = u'Luciano Ramalho'
-epub_copyright = u'2011, Luciano Ramalho'
+epub_copyright = u'1998-2011, Luciano Ramalho'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

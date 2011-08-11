@@ -198,6 +198,8 @@ Como você percebeu, no comando ``for`` tudo aquilo que aparece após os sinal "
 
 O comando ``for`` é algo que chamamos de "estrutura de controle", que serve para determinar a forma de execução de um comando ou de uma seqüência de comandos, às vezes chamada de um "bloco". Em outras linguagens, os blocos são delimitados por marcadores especiais. Java, Perl e C++ usam os sinais { e } para este fim. Pascal e Delphi usam as palavras ``BEGIN`` e ``END``. Além desses marcadores exigidos pelas linguagens, os programadores usam também o recurso da endentação, ou seja, o recuo em relação à margem esquerda, para tornar mais fácil a visualização da estrutura do programa. Veja este exemplo em Perl::
 
+.. code-block:: perl
+
     for ($i = 0; $i < 5; $i++) {  # Atenção: isto é Perl, e não Python.
         $v = $i * 3;
         print "$v\n";

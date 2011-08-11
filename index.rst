@@ -7,11 +7,11 @@
 Aprenda a Programar
 ====================
 
-**Downloads**
+.. topic:: Downloads
 
-PDF: http://ramalho.pro.br/aprendaprog/aprendaprog.pdf
+  PDF: http://ramalho.pro.br/aprendaprog/aprendaprog.pdf
 
-EPUB: http://ramalho.pro.br/aprendaprog/aprendaprog.pdf
+  EPUB: http://ramalho.pro.br/aprendaprog/aprendaprog.pdf
 
 
 Para ler na tela
@@ -28,13 +28,14 @@ Para ler na tela
    cap5
    cap6
 
+
 Pendências
 ===========
 
 .. todolist::
 
-Índices e tabelas
-==================
+Indices and tables
+===================
 
 * :ref:`genindex`
 * :ref:`modindex`

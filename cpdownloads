@@ -1,0 +1,3 @@
+#!/bin/bash
+cp _build/epub/AprendaaProgramar.epub _build/html/aprendaprog.epub
+cp _build/latex/AprendaaProgramar.pdf _build/html/aprendaprog.pdf

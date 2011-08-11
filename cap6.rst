@@ -1,3 +1,6 @@
+.. highlight:: python
+   :linenothreshold: 5
+
 ===============================================================
 Capítulo 6: Perca o medo do servidor Apache e do protocolo CGI
 ===============================================================

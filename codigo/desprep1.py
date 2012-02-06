@@ -11,6 +11,7 @@ while True:
     if not pessoa: break
     while True:
         resp = raw_input('Quanto gastou %s? ' % pessoa)
+        resp = resp.replace(',', '.')
         try:
             gasto = float(resp)
             break

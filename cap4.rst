@@ -165,7 +165,7 @@ Experimente o programa agora: ele ficou muito mais conveniente de usar. Para int
 Como tratar um erro de verdade
 ===============================
 
-A terceira versão da nossa somadora ainda não chegou lá: tratamos da mesma forma a situação em que usuário não digitou nada e aquela onde ele digitou algo que não é um número válido em Python. Pode ser que o usuário seja um datilógrafo à moda antiga, que digita L minúsculo no lugar do dígito 1. Ou ainda alguém que quer usar, com toda razão, a "," como separador decimal (Python só aceita números com ponto decimal). Para diferenciar um tipo de erro do outro, e saber quando o usuário apenas quer encerrar o programa, precisamos guardar a linha que ele digitou antes de tentar transformá-la em um número. Veja como na listagem abaixo::
+A terceira versão da nossa somadora ainda não chegou lá: tratamos da mesma forma a situação em que usuário não digitou nada e aquela onde ele digitou algo que não é um número válido em Python. Pode ser que o usuário seja um datilógrafo à moda antiga, que digita L minúsculo no lugar do dígito 1. Ou ainda alguém que quer usar, com toda razão, a "," como separador decimal (Python só aceita números com ponto decimal). Para diferenciar um tipo de erro do outro, e saber quando o usuário apenas quer encerrar o programa, precisamos guardar a linha que ele digitou antes de tentar transformá-la em um número. Veja como na listagem abaixo:
 
 .. literalinclude:: codigo/somadora4.py
 
@@ -326,7 +326,7 @@ Linhas 18 a 20
 Linhas 22 a 25
   Para cada pessoa, o programa exibe seu saldo. Aqueles que têm saldo negativo têm valores a pagar; os que de saldo positivo têm valores a receber.
 
-Agora, vamos à listagem do programa ``desprep1.py``::
+Agora, vamos à listagem do programa ``desprep1.py``:
 
 .. literalinclude:: codigo/desprep1.py::
 

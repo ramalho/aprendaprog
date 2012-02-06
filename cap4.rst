@@ -11,45 +11,14 @@ O capítulo anterior terminou com uma questão no ar. Após estudarmos todas as 
 
 Em vez de fazer a Bia escrever um cheque de zero reais, o melhor seria tratar esse caso especial. Veja como fazê-lo, usando uma construção if/elif/else (listagem 1). Se você guardou o arquivo despdom2.py da lição anterior, terá muito pouco o que digitar. Abra-o e salve com o nome de despdom3.py. O código é idêntico à versão anterior até a linha 14. Ali, você faz a primeira alteração: o else é substituído por um elif que verifica se Bia gastou menos que a média. As linhas 15 e 16 continuam como antes, mas agora elas só serão executadas se bia < media for verdadeiro. As linhas 17 e 18 são novas, e servem para tratar o caso em que nem ana < media nem bia < media, ou seja, quando não há diferença a ser paga. Agora você pode testar o programa digitando valores diferentes e depois valores iguais para as despesas de Ana e Bia.
 
-::
-
-  # despdom3.py - Calculadora de despesas domesticas - versao 3
-
-  print 'Balanco de despesas domesticas'
-  ana = float(raw_input('Quanto gastou Ana? '))
-  bia = float(raw_input('Quanto gastou Bia? '))
-  print
-  total = ana + bia
-  print 'Total de gastos: R$ %s' % total
-  media = total/2
-  print 'Gastos por pessoa: R$ %s' % media
-  if ana < media:
-     diferenca = media - ana
-     print 'Ana deve pagar: R$ %s' % diferenca
-  elif bia < media:
-     diferenca = media -  bia
-     print 'Bia deve pagar: R$ %s' % diferenca
-  else:
-     print 'Ana e Bia gastaram a mesma Quantia.'
+.. literalinclude:: codigo/despdom3.py
 
 Somadora infinita
 ==================
 
 Logo adiante iremos reescrever o programinha acima para torná-lo mais flexível, permitindo digitar os nomes e os gastos de qualquer número de pessoas. Assim ele será útil para repartir as contas de uma viagem de férias ou daquela festa entre amigos. Para começar, vamos construir um programa um pouco mais simples, capaz de somar uma série de números (listagem 2).
 
-::
-
-  # somadora1.py - somadora infinita - versao 1
-
-  print 'Digite os valores a somar seguidos de [ENTER].'
-  print 'Para encerrar digite zero: 0'
-  n = float(raw_input(':'))
-  total = n
-  while n != 0:
-     n = float(raw_input(':'))
-     total = total + n
-  print 'TOTAL: %s' % total
-
+.. literalinclude:: codigo/somadora1.py
 
 Vamos ver o que faz esse programa, linha por linha.
 
@@ -94,18 +63,7 @@ Loops (quase) infinitos
 
 Outra forma de escrever a somadora, mais elegante em minha opinião, é a mostrada na listagem 3.
 
-::
-
-  # somadora2.py - somadora infinita - versao 2
-
-  print 'Digite os valores a somar seguidos de [ENTER].'
-  print 'Para encerrar digite zero: 0'
-  total = 0
-  while True:
-      n = float(raw_input(':'))
-      if n == 0: break
-      total = total + n
-  print 'TOTAL: %s' % total
+.. literalinclude:: codigo/somadora2.py
 
 Aqui a lógica é um pouco diferente: na linha 6 o loop ``while`` tem como condição a constante ``True``, ou "verdadeiro". Assim o loop das linhas 6 a 9 seria repetido infinitas vezes, em tese. Na prática, a linha 8 verifica se o valor de n é zero. Em caso afirmativo, o comando "break" é acionado. Isso faz com que o loop while seja interrompido imediatamente, e a execução do programa passa diretamente para a próxima linha após o bloco (linha 10 em nosso exemplo).
 
@@ -177,20 +135,7 @@ A melhor maneira de resolver esse problema envolve o uso de mais uma comando de 
 
 Veja na listagem abaixo como fica a ``somadora3.py``, agora com tratamento de exceções.
 
-::
-
-  # somadora3.py - somadora infinita - versao 3
-
-  print 'Digite os valores a somar seguidos de [ENTER].'
-  print 'Para encerrar apenas [ENTER].'
-  total = 0
-  while True:
-      try:
-          n = float(raw_input(':'))
-          total = total + n
-      except:
-          break
-  print 'TOTAL: %s' % total
+.. literalinclude:: codigo/somadora3.py
 
 Vamos comentar apenas as diferenças em relação à versão anterior:
 
@@ -222,24 +167,7 @@ Como tratar um erro de verdade
 
 A terceira versão da nossa somadora ainda não chegou lá: tratamos da mesma forma a situação em que usuário não digitou nada e aquela onde ele digitou algo que não é um número válido em Python. Pode ser que o usuário seja um datilógrafo à moda antiga, que digita L minúsculo no lugar do dígito 1. Ou ainda alguém que quer usar, com toda razão, a "," como separador decimal (Python só aceita números com ponto decimal). Para diferenciar um tipo de erro do outro, e saber quando o usuário apenas quer encerrar o programa, precisamos guardar a linha que ele digitou antes de tentar transformá-la em um número. Veja como na listagem abaixo::
 
-  # somadora4.py - somadora infinita - versao 4
-
-  print 'Digite os valores a somar seguidos de .'
-  print 'Para encerrar apenas .'
-  total = 0
-  while True:
-      try:
-          linha = raw_input(':')
-          n = float(linha)
-          total = total + n
-      except:
-          if len(linha) == 0:
-               break
-          elif ',' in linha:
-               print 'Use o . (ponto) como separador decimal.'
-          else:
-               print 'Isso nao parece um numero valido.'
-  print 'TOTAL: %s' % total
+.. literalinclude:: codigo/somadora4.py
 
 Vamos analisar as novidades dessa versão:
 
@@ -400,37 +328,7 @@ Linhas 22 a 25
 
 Agora, vamos à listagem do programa ``desprep1.py``::
 
-  #desprep1.py - calculo de despesas da republica
-
-  print 'Balanco de despesas da Republica Recanto Suico'
-  print
-  print '(deixe um nome em branco para encerrar)'
-  print
-  total = 0
-  contas = {}
-  while True:
-      pessoa = raw_input('Digite o nome da pessoa: ')
-      if not pessoa: break
-      while True:
-          resp = raw_input('Quanto gastou %s? ' % pessoa)
-          try:
-              gasto = float(resp)
-              break
-          except:
-              print 'Numero invalido.'
-      contas[pessoa] = gasto
-      total = total + gasto
-
-  num_pessoas = len(contas)
-  print
-  print 'Numero de pessoas: %d' % num_pessoas
-  print 'Total de gastos: R$ %.2f' % total
-  media = total/num_pessoas
-  print 'Gastos por pessoa: R$ %.2f' % media
-  print
-  for nome in contas.keys():
-      saldo = contas[nome] - media
-      print 'Saldo de %s: %.2f' % (nome, saldo)
+.. literalinclude:: codigo/desprep1.py::
 
 Linhas 3 a 5
   Exibir identificação e instruções.
@@ -497,59 +395,7 @@ Nossa primeira simulação
 
 Agora já sabemos tudo o que precisávamos para implementar um jogo simples, como havíamos prometido no capítulo anterior. Trata-se de uma simulação de pouso lunar, em modo texto. Esse programinha é baseado em um jogo clássico escrito para calculadoras HP-25. Nossa versão é bem mais fácil de entender que o original para calculadora. Em vez de explicar linha por linha o funcionamento do programa, colocamos comentários abundantes na própria listagem, delimitados pelo sinal #. Lembre-se de que não é preciso digitar os comentários (e o programa inteiro pode ser simplesmente copiado aqui no site). Esse simulador de alunissagem é um game de recursos mínimos, mas ainda assim deve valer alguns minutos de diversão, especialmente se você curte a física newtoniana ensinada no colegial.
 
-::
-
-  # lunar.py
-  # O jogo da alunissagem
-  # importar funcao sqrt do modulo math
-  from math import sqrt
-
-  x = 500.    # altitude em pes
-  v = -50.    # velocidade em pes/s
-  g = -5. # aceleracao gravitacional lunar em pes/s/s
-  t = 1.  # tempo entre jogadas em segundos
-  comb = 120. # quantidade de combustível
-
-  print 'Simulacao de alunissagem'
-  print
-  print '(digite a quantidade de combustivel a queimar)'
-
-  fmt = 'Alt: %6.2f  Vel: %6.2f  Comb: %3d'
-  while x > 0:  # enquanto nao tocamos o solo
-      msg = fmt % (x, v, comb) # montar mensagem
-      if comb > 0:  # ainda temos combustivel?
-          # obter quantidade de combustivel a queimar
-          resp = raw_input(msg + ' Queima = ')
-          try:    # converter resposta em numero
-              queima = float(resp)
-          except: # a resposta nao era um numero
-              queima = 0
-          if queima > comb: # queimou mais do que tinha?
-              queima = comb # entao queima o que tem
-          comb = comb - queima    # subtrai queimado
-          a = g + queima    # acel = grav + queima
-      else:    # sem combustivel
-          print msg   # mensagem sem perguntar
-          a = g   # aceleracao = gravidade
-      x0 = x  # armazenar posicao inicial
-      v0 = v  # armazenar velocidade inicial
-      x = x0 + v0*t + a*t*t/2     # calc. nova posicao
-      v = v0 + a*t                # calc. nova vel.
-  # se o loop acabou, tocamos no solo (x <= 0)
-  vf = sqrt(v0*v0 + 2*-a*x0)  # calcular vel. final
-  print '>>>CONTATO! Velocidade final: %6.2f' % (-vf)
-  # avaliar pouso de acordo com a velocidade final
-  if vf == 0:
-      msg = 'Alunissagem perfeita!'
-  elif vf <= 2:
-      msg = 'Alunissagem dentro do padrao.'
-  elif vf <= 10:
-      msg = 'Alunissagem com avarias leves.'
-  elif vf <= 20:
-      msg = 'Alunissagem com avarias severas.'
-  else:
-      msg = 'Modulo lunar destruido no impacto.'
-  print '>>>' + msg
+.. literalinclude:: codigo/desprep1.py
 
 Como jogar
 -----------

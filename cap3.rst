@@ -132,17 +132,7 @@ Digite o programinha abaixo, salve como ``despdom1.py`` e execute na linha de co
 
 .. todo:: Mostrar como usar encoding para fazer mensagens acentuadas
 
-::
-
-  # despdom1.py - Calculadora de despesas domesticas
-
-  print 'Balanco de despesas domesticas'
-  ana = raw_input('Quanto gastou Ana? ')
-  bia = raw_input('Quanto gastou Bia? ')
-  total = float(ana) + float(bia)
-  print 'Total de gastos = R$ %s.' % total
-  media = total/2
-  print 'Gastos por pessoa = R$ %s.' % media
+.. literalinclude:: codigo/despdom1.py
 
 Os números que aparecem à esquerda na listagem acima não fazem parte do programa e não devem ser digitados. Eles estão aí para facilitar a explicação que vem logo a seguir.
 
@@ -204,24 +194,7 @@ O programa acima é quase útil. Ele calcula a despesa total e a média, mas nã
 
 Utilize o comando ``File > Save As...`` para salvar o programa ``despdom1.py`` como ``despdom2.py``. Agora vamos modificá-lo para fazer o que queremos. Abaixo, o programa final, e a seguir, a explicação de cada mudança que foi feita.
 
-::
-
-  # despdom2.py - Calculadora de despesas domesticas - versao 2
-
-  print 'Balanco de despesas domesticas'
-  ana = float(raw_input('Quanto gastou Ana? '))
-  bia = float(raw_input('Quanto gastou Bia? '))
-  print
-  total = ana + bia
-  print 'Total de gastos: R$ %s' % total
-  media = total/2
-  print 'Gastos por pessoa: R$ %s' % media
-  if ana < media:
-      diferenca = media - ana
-      print 'Ana deve pagar: R$ %s' %diferenca
-  else:
-      diferenca = media - bia
-      print 'Bia deve pagar: R$ %s' % diferenca
+.. literalinclude:: codigo/despdom2.py
 
 O que mudou:
 

@@ -9,7 +9,7 @@ O capítulo anterior terminou com uma questão no ar. Após estudarmos todas as 
 
   Bia deve pagar: R$ 0.0
 
-Em vez de fazer a Bia escrever um cheque de zero reais, o melhor seria tratar esse caso especial. Veja como fazê-lo, usando uma construção ``if/elif/else`` (listagem 1). Se você guardou o arquivo ``despdom2.py`` da lição anterior, terá muito pouco o que digitar. Abra-o e salve com o nome de ``despdom3.py``. O código é idêntico à versão anterior até a linha 14. Ali, você faz a primeira alteração: o ``else`` é substituído por um ``elif`` que verifica se Bia gastou menos que a média. As linhas 15 e 16 continuam como antes, mas agora elas só serão executadas se ``bia < media`` for verdadeiro. As linhas 17 e 18 são novas, e servem para tratar o caso em que nem ``ana < media`` nem ``bia < media``, ou seja, quando não há diferença a ser paga. Agora você pode testar o programa digitando valores diferentes e depois valores iguais para as despesas de Ana e Bia.
+Em vez de fazer a Bia escrever um cheque de zero reais, o melhor seria tratar esse caso especial. Veja como fazê-lo, usando uma construção ``if…elif…else`` (listagem 1). Se você guardou o arquivo ``despdom2.py`` da lição anterior, terá muito pouco o que digitar. Abra-o e salve com o nome de ``despdom3.py``. O código é idêntico à versão anterior até a linha 14. Ali, você faz a primeira alteração: o ``else`` é substituído por um ``elif`` que verifica se Bia gastou menos que a média. As linhas 15 e 16 continuam como antes, mas agora elas só serão executadas se ``bia < media`` for verdadeiro. As linhas 17 e 18 são novas, e servem para tratar o caso em que nem ``ana < media`` nem ``bia < media``, ou seja, quando não há diferença a ser paga. Agora você pode testar o programa digitando valores diferentes e depois valores iguais para as despesas de Ana e Bia.
 
 .. literalinclude:: codigo/despdom3.py
     :linenos:
@@ -36,8 +36,7 @@ Linha 6
   A variável total servirá para guardar a soma acumulada. Para começar, colocamos nela o primeiro valor digitado.
 
 Linha 7
-  Aqui usamos um novo comando de bloco, o while. Essa linha pode ser traduzida assim: "enquanto n é diferente de zero...". Assim como o comando for, o while causa a execução repetida do bloco subordinado (linhas 8 e 9). Em um comando while, a repetição é condicionada a uma expressão lógica do mesmo tipo que usamos com o comando if. Nesse exemplo, a condição
-  ``n != 0`` causará a repetição do bloco enquanto for verdadeiro que n é diferente de 0. No momento que n contiver o valor 0, a condição será falsa e a repetição deixará de ocorrer. O programa então seguirá para a linha 10.
+  Aqui usamos um novo comando de bloco, o ``while``. Essa linha pode ser traduzida assim: "enquanto n é diferente de zero...". Assim como o comando ``for``, o ``while`` causa a execução repetida do bloco subordinado (linhas 8 e 9). Em um comando while, a repetição é condicionada a uma expressão lógica do mesmo tipo que usamos com o comando ``if``. Nesse exemplo, a condição ``n != 0`` causará a repetição do bloco enquanto for verdadeiro que n é diferente de 0. No momento que n contiver o valor 0, a condição será falsa e a repetição deixará de ocorrer. O programa então seguirá para a linha 10.
 
 Linha 10
   Mostramos o total acumulado. Fim do programa.
@@ -72,7 +71,7 @@ Outra forma de escrever a somadora, mais elegante em minha opinião, é a mostra
     :linenos:
 
 
-Aqui a lógica é um pouco diferente: na linha 6 o loop ``while`` tem como condição a constante ``True``, ou "verdadeiro". Assim o loop das linhas 6 a 9 seria repetido infinitas vezes, em tese. Na prática, a linha 8 verifica se o valor de n é zero. Em caso afirmativo, o comando "break" é acionado. Isso faz com que o loop while seja interrompido imediatamente, e a execução do programa passa diretamente para a próxima linha após o bloco (linha 10 em nosso exemplo).
+Aqui a lógica é um pouco diferente: na linha 6 o loop ``while`` tem como condição a constante ``True``, ou "verdadeiro". Assim o loop das linhas 6 a 9 seria repetido infinitas vezes, em tese. Na prática, a linha 8 verifica se o valor de n é zero. Em caso afirmativo, o comando "break" é acionado. Isso faz com que o loop ``while`` seja interrompido imediatamente, e a execução do programa passa diretamente para a próxima linha após o bloco (linha 10 em nosso exemplo).
 
 Essa forma de codificar, usando loops infinitos com breaks, não está de acordo com a Programação Estruturada, a filosofia dominante entre os programadores nos anos 70. O problema é que não fica imediatamente aparente qual é a condição de terminação do loop e alguns professores de computação podem descontar pontos por isso. Mas em se tratando de um bloco de apenas três linhas, não acho que isso seja um grande problema. A vantagem é que agora a função de leitura de dados ocorre em apenas um lugar no programa (na linha 7) e não em dois, como na versão anterior (linhas 5 e 8 de somadora1.py). Isso simplificará nossa próxima alteração. Além disso, não acontece mais a totalização inútil da linha 9, somando zero ao total na saída, porque o comando break da linha 8 faz o programa passar direto para a linha 10.
 
@@ -112,7 +111,7 @@ Python
       total = total + n
       if total >= 100: break
 
-Note que os três programas acima estão incompletos; reproduzimos apenas o loop principal. Generalizando, qualquer loop com teste no final pode ser codificado em Python usando-se uma combinação de while True e if/break, assim::
+Note que os três programas acima estão incompletos; reproduzimos apenas o loop principal. Generalizando, qualquer loop com teste no final pode ser codificado em Python usando-se uma combinação de ``while True`` e ``if…break``, assim::
 
   while True:
       comando1
@@ -136,9 +135,9 @@ O problema é que, ao digitarmos ``[Enter]`` sem fornecer um número, a função
 
 Efeito semelhante pode ser obtido se você digitar um texto qualquer em vez de um número. Experimente.
 
-Nesse caso, a mensagem de erro final é: "ValueError: invalid literal for ''float''(): blah". Nesse caso, a reclamação é de "''invalid literal''", significando que o texto fornecido para a função ``float()`` não se parece com um número.
+Nesse caso, a mensagem de erro final é: ``ValueError: invalid literal for ''float''(): blah``. Nesse caso, a reclamação é de "''invalid literal''", significando que o texto fornecido para a função ``float()`` não se parece com um número.
 
-A melhor maneira de resolver esse problema envolve o uso de mais uma comando de bloco de Python: o conjunto ``try/except`` (tentar/exceto). Esse par de palavras-chave formam o mecanismo de "tratamento de exceções" de Python, algo que só se encontra em linguagens bastante modernas como Java e as versões mais recentes de C++. A idéia básica é simples: no caso da nossa somadora, vamos tentar (``try``) converter a ''string'' digitada em ''float''; se isso não der certo, temos uma exceção, que deve ter tratamento especial. No nosso caso, vamos simplesmente acionar o comando ``break`` para interromper o ''loop'' e exibir a totalização.
+A melhor maneira de resolver esse problema envolve o uso de mais um comando de bloco de Python: o conjunto ``try…except`` (tentar…exceto). Esse par de palavras-chave formam o mecanismo de "tratamento de exceções" de Python, algo que só se encontra em linguagens modernas como Java e as versões mais recentes de C++. A idéia básica é simples: no caso da nossa somadora, vamos tentar (``try``) converter a ''string'' digitada em ''float''; se isso não der certo, temos uma exceção, que deve ter tratamento especial. No nosso caso, vamos simplesmente acionar o comando ``break`` para interromper o ''loop'' e exibir a totalização.
 
 Veja na listagem abaixo como fica a ``somadora3.py``, agora com tratamento de exceções.
 
@@ -199,7 +198,7 @@ Linha 14
   O operador ''in'' (em) retorna verdadeiro se o item à esquerda for encontrado na seqüência à direita; nesse caso verificamos se existe uma vírgula dentro da ''string'' ``linha``.
 
 Linha 15
-  Como encontramos uma vírgula, vamos supor que o usuário tentou digitar um número fracionário. Então vamos sugerir que ele use o ponto decimal. Nesse caso, não executamos o ``break``. Nenhum outro comando no bloco if/elif/else será executado, e o loop recomeçará de novo a partir da linha 6.
+  Como encontramos uma vírgula, vamos supor que o usuário tentou digitar um número fracionário. Então vamos sugerir que ele use o ponto decimal. Nesse caso, não executamos o ``break``. Nenhum outro comando no bloco ``if…elif…else`` será executado, e o loop recomeçará de novo a partir da linha 6.
 
 Linhas 16 e 17
   Aqui vamos tratar todos os demais casos, dizendo que o que foi digitado não se parece com um número. Novamente, sem o ``break``, o ''loop'' reiniciará, e logo o sinal ':' aparecerá na tela aguardando nova digitação.
@@ -392,13 +391,13 @@ Linhas 26 a 27
   O gasto por cabeça é calculado e mostrado, também com duas casas decimais.
 
 Linha 29
-  Aqui começamos um loop for que será repetido para cada nome que constar na lista de chaves do dicionário. A lista de chaves é obtida através do método keys(). A variável nome apontará, sucessivamente, para cada nome encontrado nesta lista.
+  Aqui começamos um loop ``for`` que será repetido para cada nome que constar na lista de chaves do dicionário. A lista de chaves é obtida através do método ``keys()``. A variável nome apontará, sucessivamente, para cada nome encontrado nesta lista.
 
 Linha 30
-  Os valor gasto por uma pessoa é obtido acessando o dicionário com a expressão contas[nome]. Subtraímos o gasto médio para obter o saldo daquela pessoa.
+  Os valor gasto por uma pessoa é obtido acessando o dicionário com a expressão ``contas[nome]``. Subtraímos o gasto médio para obter o saldo daquela pessoa.
 
 Linha 31
-  Exibimos o nome e o saldo da pessoa. Esta é a última linha do loop for, que percorrerá todas as chaves do dicionário.
+  Exibimos o nome e o saldo da pessoa. Esta é a última linha do loop ``for``, que percorrerá todas as chaves do dicionário.
 
 Nossa primeira simulação
 =========================

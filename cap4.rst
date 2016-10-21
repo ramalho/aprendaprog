@@ -9,9 +9,11 @@ O capítulo anterior terminou com uma questão no ar. Após estudarmos todas as 
 
   Bia deve pagar: R$ 0.0
 
-Em vez de fazer a Bia escrever um cheque de zero reais, o melhor seria tratar esse caso especial. Veja como fazê-lo, usando uma construção if/elif/else (listagem 1). Se você guardou o arquivo despdom2.py da lição anterior, terá muito pouco o que digitar. Abra-o e salve com o nome de despdom3.py. O código é idêntico à versão anterior até a linha 14. Ali, você faz a primeira alteração: o else é substituído por um elif que verifica se Bia gastou menos que a média. As linhas 15 e 16 continuam como antes, mas agora elas só serão executadas se bia < media for verdadeiro. As linhas 17 e 18 são novas, e servem para tratar o caso em que nem ana < media nem bia < media, ou seja, quando não há diferença a ser paga. Agora você pode testar o programa digitando valores diferentes e depois valores iguais para as despesas de Ana e Bia.
+Em vez de fazer a Bia escrever um cheque de zero reais, o melhor seria tratar esse caso especial. Veja como fazê-lo, usando uma construção ``if/elif/else`` (listagem 1). Se você guardou o arquivo ``despdom2.py`` da lição anterior, terá muito pouco o que digitar. Abra-o e salve com o nome de ``despdom3.py``. O código é idêntico à versão anterior até a linha 14. Ali, você faz a primeira alteração: o ``else`` é substituído por um ``elif`` que verifica se Bia gastou menos que a média. As linhas 15 e 16 continuam como antes, mas agora elas só serão executadas se ``bia < media`` for verdadeiro. As linhas 17 e 18 são novas, e servem para tratar o caso em que nem ``ana < media`` nem ``bia < media``, ou seja, quando não há diferença a ser paga. Agora você pode testar o programa digitando valores diferentes e depois valores iguais para as despesas de Ana e Bia.
 
 .. literalinclude:: codigo/despdom3.py
+    :linenos:
+
 
 Somadora infinita
 ==================
@@ -19,6 +21,8 @@ Somadora infinita
 Logo adiante iremos reescrever o programinha acima para torná-lo mais flexível, permitindo digitar os nomes e os gastos de qualquer número de pessoas. Assim ele será útil para repartir as contas de uma viagem de férias ou daquela festa entre amigos. Para começar, vamos construir um programa um pouco mais simples, capaz de somar uma série de números (listagem 2).
 
 .. literalinclude:: codigo/somadora1.py
+    :linenos:
+
 
 Vamos ver o que faz esse programa, linha por linha.
 
@@ -26,27 +30,28 @@ Linhas 3 e 4
   Exibimos as instruções de uso.
 
 Linha 5
-  Usamos a função ``raw_input()`` para exibir o sinal ":" e ler o primeiro valor digitado pelo usuário, e a função float para transformar a ''string'' resultante em um número de ponto flutuante. O resultado é armazenado na variável n.
+  Usamos a função ``input()`` para exibir o sinal ":" e ler o primeiro valor digitado pelo usuário, e a função float para transformar a ''string'' resultante em um número de ponto flutuante. O resultado é armazenado na variável n.
 
 Linha 6
   A variável total servirá para guardar a soma acumulada. Para começar, colocamos nela o primeiro valor digitado.
 
 Linha 7
-  Aqui usamos um novo comando de bloco, o while. Essa linha pode ser traduzida assim: "enquanto n é diferente de zero...". Assim como o comando for, o while causa a execução repetida do bloco subordinado (linhas 8 e 9). Em um comando while, a repetição é condicionada a uma expressão lógica do mesmo tipo que usamos com o comando if. Nesse exemplo, a condição n != 0 causará a repetição do bloco enquanto for verdadeiro que n é diferente de 0. No momento que n contiver o valor 0, a condição será falsa e a repetição deixará de ocorrer. O programa então seguirá para a linha 10.
+  Aqui usamos um novo comando de bloco, o while. Essa linha pode ser traduzida assim: "enquanto n é diferente de zero...". Assim como o comando for, o while causa a execução repetida do bloco subordinado (linhas 8 e 9). Em um comando while, a repetição é condicionada a uma expressão lógica do mesmo tipo que usamos com o comando if. Nesse exemplo, a condição
+  ``n != 0`` causará a repetição do bloco enquanto for verdadeiro que n é diferente de 0. No momento que n contiver o valor 0, a condição será falsa e a repetição deixará de ocorrer. O programa então seguirá para a linha 10.
 
 Linha 10
   Mostramos o total acumulado. Fim do programa.
 
-Mais sobre o while
-===================
+Mais sobre o ``while``
+=======================
 
-Os comandos while e for são semelhantes por causarem a repetição de um bloco. Ambos são chamados, pelos computólogos, de comandos de iteração (iteração é sinônimo de repetição; não confunda com "interação", que é uma ação recíproca entre dois ou mais agentes).
+Os comandos ``while`` e ``for`` são semelhantes por causarem a repetição de um bloco. Ambos são chamados, pelos computólogos, de comandos de iteração (iteração é sinônimo de repetição; não confunda com "interação", que é uma ação recíproca entre dois ou mais agentes).
 
-A diferença é que no comando for a iteração serve para percorrer uma lista de itens, como fizemos anteriormente quando trabalhamos com tabelas de conversão. No caso do for, o número de repetições é sempre conhecido de antemão: o bloco será executado uma vez para cada item da lista. O comando while serve para todos os outros casos de iteração, quando o número de repetições é indefinido. Nossa somadora infinita é um exemplo típico: a iteração que solicita valores e os totaliza poderá ser repetida qualquer número de vezes, dependendo apenas da sua vontade.
+A diferença é que no comando ``for`` a iteração serve para percorrer uma lista de itens, como fizemos anteriormente quando trabalhamos com tabelas de conversão. No caso do ``for``, o número de repetições é conhecido de antemão: o bloco será executado uma vez para cada item da lista. O comando ``while`` serve para todos os outros casos de iteração, quando o número de repetições é desconhecido. Nossa somadora infinita é um exemplo típico: a iteração que solicita valores e os totaliza poderá ser repetida qualquer número de vezes, dependendo apenas da sua vontade.
 
-Agora vamos analisar de perto duas circunstâncias especiais. Rode o programa e digite 0 (zero) como primeiro valor. Nas linhas 5 e 6 o programa armazenará o zero nas variáveis n e total. A seguir, na linha 7, o comando while verificará a condição n != 0. Nesse caso, a condição será falsa. Então o bloco subordinado ao while não será executado nenhuma vez, e o programa passará direto para a linha 10, mostrando o total.
+Agora vamos analisar de perto duas circunstâncias especiais. Rode o programa e digite 0 (zero) como primeiro valor. Nas linhas 5 e 6 o programa armazenará o zero nas variáveis ``n`` e ``total``. A seguir, na linha 7, o comando ``while`` verificará a condição ``n != 0``. Nesse caso, a condição será falsa. Então o bloco subordinado ao ``while`` não será executado nenhuma vez, e o programa passará direto para a linha 10, mostrando o total.
 
-Outro momento interessante ocorre quando o primeiro valor digitado não é zero, e a iteração é executada. Digamos que o usuário digitou [1][Enter], [2][Enter] e [0][Enter]. O zero digitado pelo usuário será lido e armazenado em n na linha 8, como já vimos. Na linha 9 o valor de n é somado ao total. Nessa iteração o valor de n é zero, portanto estamos somando zero ao total, uma operação inofensiva. Só após efetuar essa soma inútil, o programa retornará ao início do bloco e verificará que a condição do while não é mais verdadeira, pois agora nosso n é igual a zero. É importante perceber que, apesar de o valor de n passar a ser zero na linha 8, a execução continua até o fim do bloco, passando pela linha 9, para só então ocorrer o retorno ao início do bloco e a verificação da condição de continuidade da repetição.
+Outro momento interessante ocorre quando o primeiro valor digitado não é zero, e a iteração é executada. Digamos que o usuário digitou 1[Enter], 2[Enter] e 0[Enter]. O zero digitado pelo usuário será lido e armazenado em n na linha 8, como já vimos. Na linha 9 o valor de n é somado ao total. Nessa iteração o valor de n é zero, portanto estamos somando zero ao total, uma operação inofensiva. Só após efetuar essa soma inútil, o programa retornará ao início do bloco e verificará que a condição do ``while`` não é mais verdadeira, pois agora nosso ``n`` é igual a zero. É importante perceber que, apesar de o valor de ``n`` passar a ser zero na linha 8, a execução continua até o fim do bloco, passando pela linha 9, para só então ocorrer o retorno ao início do bloco e a verificação da condição de continuidade da repetição.
 
 Quando estudamos as condições lógicas no final do capítulo anterior, aprendemos que Python considera o valor 0 (zero) como sinônimo de "falso", e valores não-zero como "verdadeiros". Programadores experientes em Python costumam tirar proveito desse fato para abreviar as condições que colocam em seus ifs e whiles. Em nosso programa ``somadora1.py``, a linha 7::
 
@@ -64,6 +69,8 @@ Loops (quase) infinitos
 Outra forma de escrever a somadora, mais elegante em minha opinião, é a mostrada na listagem 3.
 
 .. literalinclude:: codigo/somadora2.py
+    :linenos:
+
 
 Aqui a lógica é um pouco diferente: na linha 6 o loop ``while`` tem como condição a constante ``True``, ou "verdadeiro". Assim o loop das linhas 6 a 9 seria repetido infinitas vezes, em tese. Na prática, a linha 8 verifica se o valor de n é zero. Em caso afirmativo, o comando "break" é acionado. Isso faz com que o loop while seja interrompido imediatamente, e a execução do programa passa diretamente para a próxima linha após o bloco (linha 10 em nosso exemplo).
 
@@ -120,12 +127,12 @@ Um defeito das nossas somadoras, e de todos os programas que fizemos até agora,
 
    Traceback (innermost last):
          File 'somadora1.py', line 7, in ?
-    n = float(raw_input())
+    n = float(input())
    ValueError: empty string for float()
 
 A segunda linha dessa mensagem identifica o local do erro: linha 7 do arquivo (file) ``somadora1.py``. Na terceira linha está reproduzida a linha do programa onde ocorreu o problema, e a mensagem final informa qual foi o erro. Podemos traduzí-la assim: "Erro de valor: ''string'' vazia para a função ``float()``".
 
-O problema é que, ao digitarmos ``[Enter]`` sem fornecer um número, a função ``raw_input()`` retorna uma ''string'' vazia (nada mais justo, pois nada foi digitado). Em seguinda, a função ``float()`` tenta transformar a ''string'' vazia em um ponto flutuante, mas não sabe como. É ela que dispara a mensagem de erro, fazendo com que o programa seja interrompido antes de mostrar o valor total da soma.
+O problema é que, ao digitarmos ``[Enter]`` sem fornecer um número, a função ``input()`` retorna uma ''string'' vazia (nada mais justo, pois nada foi digitado). Em seguinda, a função ``float()`` tenta transformar a ''string'' vazia em um ponto flutuante, mas não sabe como. É ela que dispara a mensagem de erro, fazendo com que o programa seja interrompido antes de mostrar o valor total da soma.
 
 Efeito semelhante pode ser obtido se você digitar um texto qualquer em vez de um número. Experimente.
 
@@ -136,6 +143,7 @@ A melhor maneira de resolver esse problema envolve o uso de mais uma comando de 
 Veja na listagem abaixo como fica a ``somadora3.py``, agora com tratamento de exceções.
 
 .. literalinclude:: codigo/somadora3.py
+    :linenos:
 
 Vamos comentar apenas as diferenças em relação à versão anterior:
 
@@ -146,7 +154,7 @@ Linha 7
   Início do bloco ``try``: tentaremos executar as linhas 8 e 9. Qualquer erro que ocorrer aqui será tratado no bloco except.
 
 Linha 8
-  Aqui é o local mais provável do erro, quando ``float()`` tenta converter o resultado de ``raw_input()``.
+  Aqui é o local mais provável do erro, quando ``float()`` tenta converter o resultado de ``input()``.
 
 Linha 9
   Se ocorrer um erro na linha 8, a linha 9 não será executada porque, dentro do bloco try qualquer erro causa a transferência imediata da execução para o bloco except correspondente.
@@ -330,7 +338,7 @@ Linhas 22 a 25
 Agora, vamos à listagem do programa ``desprep1.py``:
 
 .. literalinclude:: codigo/desprep1.py
-  :linenos:
+    :linenos:
 
 Linhas 3 a 5
   Exibir identificação e instruções.
@@ -398,6 +406,8 @@ Nossa primeira simulação
 Agora já sabemos tudo o que precisávamos para implementar um jogo simples, como havíamos prometido no capítulo anterior. Trata-se de uma simulação de pouso lunar, em modo texto. Esse programinha é baseado em um jogo clássico escrito para calculadoras HP-25. Nossa versão é bem mais fácil de entender que o original para calculadora. Em vez de explicar linha por linha o funcionamento do programa, colocamos comentários abundantes na própria listagem, delimitados pelo sinal #. Lembre-se de que não é preciso digitar os comentários (e o programa inteiro pode ser simplesmente copiado aqui no site). Esse simulador de alunissagem é um game de recursos mínimos, mas ainda assim deve valer alguns minutos de diversão, especialmente se você curte a física newtoniana ensinada no colegial.
 
 .. literalinclude:: codigo/desprep1.py
+    :linenos:
+
 
 Como jogar
 -----------

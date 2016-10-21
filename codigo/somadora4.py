@@ -1,18 +1,18 @@
-# somadora4.py - somadora infinita - versao 4
+# somadora4.py - somadora infinita - versão 4
 
-print 'Digite os valores a somar seguidos de .'
-print 'Para encerrar apenas .'
+print('Digite cada valor a somar seguido de [ENTER].')
+print('Para encerrar apenas [ENTER].')
 total = 0
 while True:
     try:
-        linha = raw_input(':')
+        linha = input(':')
         n = float(linha)
         total = total + n
-    except:
+    except ValueError:
         if len(linha) == 0:
              break
         elif ',' in linha:
-             print 'Use o . (ponto) como separador decimal.'
+             print('Use o . (ponto) como separador decimal.')
         else:
-             print 'Isso nao parece um numero valido.'
-print 'TOTAL: %s' % total
+             print('Isso não parece um número válido.')
+print('TOTAL: %s' % total)

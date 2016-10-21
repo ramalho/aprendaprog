@@ -1,10 +1,10 @@
-# somadora2.py - somadora infinita - versao 2
+# somadora2.py - somadora infinita - versão 2
 
-print 'Digite os valores a somar seguidos de [ENTER].'
-print 'Para encerrar digite zero: 0'
+print('Digite cada valor a somar seguido de [ENTER].')
+print('Para encerrar digite 0 (zero).')
 total = 0
 while True:
-    n = float(raw_input(':'))
+    n = float(input(':'))
     if n == 0: break
     total = total + n
-print 'TOTAL: %s' % total
+print('TOTAL: %s' % total)

@@ -2,17 +2,19 @@
 Capítulo 1: Abrindo e fechando o console
 =========================================
 
-A melhor forma de aprender a programar é usando o console de um interpretador em modo interativo. Dessa forma você pode digitar comandos linha por linha e observar a cada passo como o computador interpreta e executa esses comandos. Para fazer isso em Python, há duas maneiras: 
+A melhor forma de aprender a programar é usando o console de um interpretador em modo interativo. Dessa forma você pode digitar comandos linha por linha e observar a cada passo como o computador interpreta e executa esses comandos. Para fazer isso em Python, há duas maneiras:
 
-1. executar o interpretador em modo texto (chamado "Python (command line)" no Windows, ou simplesmente ``python`` no Linux)
+..todo:: Jupyter
 
-2. usar o IDLE, que é um ambiente baseado em janelas. 
+1. executar o interpretador em modo texto (clicando em "Python (command line)" no Windows, ou simplesmente ``python3`` no Linux ou no MacOS X)
+
+2. usar o IDLE, que é um ambiente baseado em janelas.
 
 Se você usa Windows, escolha o IDLE para começar a acompanhar esse tutorial. O IDLE também está disponível para a plataforma Linux (algumas distribuições colocam o IDLE em um pacote separado do pacote do Python).
 
 Seja qual for o interpretador que você escolheu, ao executá-lo você verá uma mensagem com informações de *copyright* mais ou menos como essa::
 
-    Python 2.5.1 (r251:54863, Oct  5 2007, 13:50:07) 
+    Python 2.5.1 (r251:54863, Oct  5 2007, 13:50:07)
     [GCC 4.1.3 20070929 (prerelease) (Ubuntu 4.1.2-16ubuntu2)] on linux2
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
@@ -44,7 +46,7 @@ Em Python, assim como na linguagem C, os números inteiros têm um tratamento es
     >>>
 
 
-Em vez de 3,5, o resultado foi 3. Isso acontece sempre que todos os números de uma expressão são inteiros. Neste caso, Python imagina que se deseja um resultado inteiro também (esse comportamento estranho às vezes é conveniente em programação). 
+Em vez de 3,5, o resultado foi 3. Isso acontece sempre que todos os números de uma expressão são inteiros. Neste caso, Python imagina que se deseja um resultado inteiro também (esse comportamento estranho às vezes é conveniente em programação).
 
 Se você quiser operar com números decimais, deve usar o ponto e não a vírgula como separador decimal::
 
@@ -73,7 +75,7 @@ Para exibir valores de ponto-flutuante para um usuário sem assustá-lo, use o c
 
     >>> print 2.4 * 2
     4.8
-    >>> 
+    >>>
 
 
 Você pode digitar espaços entre os números e operadores para fazer uma expressão longa ficar mais legível. Veja esse exemplo::
@@ -113,18 +115,18 @@ Ao contrário do que você aprendeu na escola, aqui os símbolos [] e {} não se
         7 + / 2
             ^
     SyntaxError: invalid syntax
-    >>> 
-    
+    >>>
+
   O interpretador indica o local de erro em vermelho no IDLE, ou com o sinal ^ no console. Nos dois casos a última linha contém as informações mais importantes: ``SyntaxError: invalid syntax``. A primeira parte, ``SyntaxError`` é o tipo do erro, e após o sinal de ``:`` vem a descrição: erro de sintaxe inválida.
 
-  No console a primeira linha da mensagem de erro indica em a linha do seu código onde ocorreu o problema. No modo interativo essa informação pouco útil, mas quando fizermos programas extensos será muito bom saber exatamente em qual linha está a falha. 
+  No console a primeira linha da mensagem de erro indica em a linha do seu código onde ocorreu o problema. No modo interativo essa informação pouco útil, mas quando fizermos programas extensos será muito bom saber exatamente em qual linha está a falha.
   Agora vamos provocar um outro tipo de erro::
 
     >>> 1.5/0
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
     ZeroDivisionError: float division
-    >>> 
+    >>>
 
   Novamente, a parte mais importante é a última linha, que nesse caso é bem fácil de entender: ``ZeroDivisionError: float division``, ou "erro de divisão por zero em divisão de ponto-flutuante".
 
@@ -137,7 +139,7 @@ Digamos que você tem uma loja de discos importados, e precisa constantemente co
     16.775699999999997
     >>> 11.95 * 1.686
     20.147699999999997
-    >>> 
+    >>>
 
 Mas há uma forma melhor: em vez de digitar o valor 1.686 o tempo todo, você pode armazenar esse valor na memória do computador, assim::
 
@@ -152,13 +154,13 @@ Note que o interpretador não respondeu nada (a menos que você tenha cometido u
     20.147699999999997
     >>> 5 * d, 7 * d, 9 * d
     (8.4299999999999997, 11.802, 15.173999999999999)
-    >>> 
+    >>>
 
 No último caso, convertemos de uma vez só os valores 5, 7 e 9 em dólares. Para um resultado mais apresentável, use o comando ``print``::
 
     >>> print 5 * d, 7 * d, 9 * d
     8.43 11.802 15.174
-    >>> 
+    >>>
 
 E se a cotação do dólar mudou para 1.61? Basta armazenar o novo número e refazer os cálculos::
 
@@ -167,7 +169,7 @@ E se a cotação do dólar mudou para 1.61? Basta armazenar o novo número e ref
     8.05 11.27 14.49
     >>>
 
-Você precisa digitar a linha mais longa de novo. No IDLE, clique sobre a linha que digitamos no exemplo anterior e tecle ``[ENTER]``. A linha será reproduzida na última deixa, e bastará um novo ``[ENTER]`` para processá-la. No console, teclando a seta para cima você acessa o histórico de comandos. 
+Você precisa digitar a linha mais longa de novo. No IDLE, clique sobre a linha que digitamos no exemplo anterior e tecle ``[ENTER]``. A linha será reproduzida na última deixa, e bastará um novo ``[ENTER]`` para processá-la. No console, teclando a seta para cima você acessa o histórico de comandos.
 
 Tabela de preços em dólares e reais
 ====================================
@@ -176,7 +178,7 @@ Agora vamos mostrar como o interpretador Python é muito mais poderoso que uma c
 
     >>> print 4*d, 5*d, 6*d, 7*d, 9*d
     6.44 8.05 9.66 11.27 14.49
-    >>> 
+    >>>
 
 Mas isso é um tanto chato e repetitivo. Em programação, sempre que você fizer algo repetitivo é porque não encontrou ainda a melhor solução. Lidar com séries de números é uma atividade comum, e Python pode ajudar muito nesses casos. Digite o seguinte::
 
@@ -198,10 +200,10 @@ Aqui nós criamos uma lista de preços na memória do computador e associamos o 
     >>>
 
 
-Aqui nós instruímos o interpretador a fazer os seguintes passos: 
+Aqui nós instruímos o interpretador a fazer os seguintes passos:
 
-- para cada item sucessivo da ``lista``: 
-    - associe o nome ``p`` ao item da vez 
+- para cada item sucessivo da ``lista``:
+    - associe o nome ``p`` ao item da vez
     - exiba o valor de ``p * d``
 
 Agora digamos que você tem discos com valores de 4 a 15 dólares. Você poderia digitar a lista de novo, mas a coisa começa a ficar repetitiva novamente. Há uma forma melhor. A linguagem Python possui uma palavra chamada ``range`` que serve para gerar faixas de números. Vamos usar essa palavra. Digite::
@@ -235,7 +237,7 @@ Agora para obter a lista de valores de discos podemos digitar::
 E usando o comando for, calcular de uma só vez todos os valores convertidos::
 
     >>> for p in range(4,16): print p * d
-    ... 
+    ...
     6.44
     8.05
     9.66
@@ -254,7 +256,7 @@ E usando o comando for, calcular de uma só vez todos os valores convertidos::
 Mas o ideal mesmo era ter os valores em dólares e reais lado a lado. Isso é fácil::
 
     >>> for p in range(4,16): print p, p * d
-    ... 
+    ...
     4 6.44
     5 8.05
     6 9.66

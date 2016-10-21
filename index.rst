@@ -1,21 +1,12 @@
 .. Aprenda a Programar documentation master file, created by
-   sphinx-quickstart on Wed Aug 10 18:57:51 2011.
+   sphinx-quickstart on Tue Oct 18 14:05:31 2016.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-====================
-Aprenda a Programar
-====================
+Aprenda a Programar (2016)
+===============================================
 
-.. topic:: Downloads
-
-  PDF: http://ramalho.pro.br/aprendaprog/aprendaprog.pdf
-
-  EPUB: http://ramalho.pro.br/aprendaprog/aprendaprog.pdf
-
-
-Para ler na tela
-=================
+Contents:
 
 .. toctree::
    :maxdepth: 2
@@ -29,15 +20,9 @@ Para ler na tela
    cap6
 
 
-Pendências
-===========
-
-.. todolist::
-
 Indices and tables
-===================
+==================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

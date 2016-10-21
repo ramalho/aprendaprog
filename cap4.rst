@@ -168,6 +168,7 @@ Como tratar um erro de verdade
 A terceira versão da nossa somadora ainda não chegou lá: tratamos da mesma forma a situação em que usuário não digitou nada e aquela onde ele digitou algo que não é um número válido em Python. Pode ser que o usuário seja um datilógrafo à moda antiga, que digita L minúsculo no lugar do dígito 1. Ou ainda alguém que quer usar, com toda razão, a "," como separador decimal (Python só aceita números com ponto decimal). Para diferenciar um tipo de erro do outro, e saber quando o usuário apenas quer encerrar o programa, precisamos guardar a linha que ele digitou antes de tentar transformá-la em um número. Veja como na listagem abaixo:
 
 .. literalinclude:: codigo/somadora4.py
+    :linenos:
 
 Vamos analisar as novidades dessa versão:
 
@@ -328,7 +329,8 @@ Linhas 22 a 25
 
 Agora, vamos à listagem do programa ``desprep1.py``:
 
-.. literalinclude:: codigo/desprep1.py::
+.. literalinclude:: codigo/desprep1.py
+  :linenos:
 
 Linhas 3 a 5
   Exibir identificação e instruções.
@@ -401,4 +403,3 @@ Como jogar
 -----------
 
 Seu objetivo é desacelerar a nave, queimando combustível na dosagem certa ao longo da queda, para tocar o solo lunar com uma velocidade bem próxima de zero. Se você quiser, pode usar um diagrama como o mostrado abaixo (colocamos em nosso site um desses em branco, para você imprimir e usar). As unidades estão no sistema inglês, como no original. O mais importante é você saber que cada 5 unidades de combustível queimadas anulam a aceleração da gravidade. Se queimar mais do que 5 unidades, você desacelera; menos do que 5, você ganha velocidade. Primeiro, pratique seus pousos preocupando-se apenas com a velocidade final. Depois você pode aumentar a dificuldade, estabelecendo um limite de tempo: por exemplo, o pouso tem que ocorrer em exatos 13 segundos. Uma última dica: cuidado para não queimar combustível cedo demais. Se você subir, vai acabar caindo de uma altura ainda maior! Boas alunissagens!
-

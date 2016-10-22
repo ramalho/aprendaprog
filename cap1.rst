@@ -4,24 +4,24 @@ Capítulo 1: Abrindo e fechando o console
 
 A melhor forma de aprender a programar é usando o console de um interpretador em modo interativo. Dessa forma você pode digitar comandos linha por linha e observar a cada passo como o computador interpreta e executa esses comandos. Para fazer isso em Python, há duas maneiras:
 
-..todo:: Jupyter
-
 1. executar o interpretador em modo texto (clicando em "Python (command line)" no Windows, ou simplesmente ``python3`` no Linux ou no MacOS X)
 
 2. usar o IDLE, que é um ambiente baseado em janelas.
+
+..todo:: Jupyter é a terceira maneira; talvez Jupyter na nuvem.
 
 Se você usa Windows, escolha o IDLE para começar a acompanhar esse tutorial. O IDLE também está disponível para a plataforma Linux (algumas distribuições colocam o IDLE em um pacote separado do pacote do Python).
 
 Seja qual for o interpretador que você escolheu, ao executá-lo você verá uma mensagem com informações de *copyright* mais ou menos como essa::
 
-    Python 2.5.1 (r251:54863, Oct  5 2007, 13:50:07)
-    [GCC 4.1.3 20070929 (prerelease) (Ubuntu 4.1.2-16ubuntu2)] on linux2
-    Type "help", "copyright", "credits" or "license" for more information.
-    >>>
+  Python 3.5.1 (default, Dec 15 2015, 21:12:44)
+  [GCC 4.8.2] on linux
+  Type "help", "copyright", "credits" or "license" for more information.
+  >>>
 
 O símbolo ``>>>`` exibido pelo interpretador é o que os americanos chamam de "prompt", que alguns traduzem por "aviso", mas nós vamos chamar de "deixa" (em teatro, o termo "prompt" é a deixa que indica ao ator a hora de dizer ou fazer algo; em computação, o "prompt" informa o usuário que o sistema está pronto para receber um novo comando).
 
-Para sair do interpretador você pode fechar a janela do IDLE, ou teclar ``[CTRL]+[D]`` (no IDLE ou no interpretador em UNIX) ou ``[CTRL]+[Z]`` e então ``[ENTER]`` (no interpretador DOS).
+Para sair do interpretador você pode fechar a janela do IDLE, ou teclar ``[CTRL]+[D]`` (no IDLE ou no interpretador em UNIX) ou ``[CTRL]+[Z]`` e então ``[ENTER]`` (no interpretador chamado pelo cmd.exe no Windows).
 
 Uma calculadora melhor
 =======================
@@ -104,7 +104,7 @@ Ao contrário do que você aprendeu na escola, aqui os símbolos [] e {} não se
 
 .. admonition:: Como decifrar as mensagens de erro do Python
 
-  A dura realidade é que um programador profissional passa boa parte de sua vida caçando erros, e por isso é fundamental saber extrair o máximo de informações das mensagens resultantes.
+  Um programador profissional passa boa parte de sua vida caçando erros, e por isso é fundamental saber extrair o máximo de informações das mensagens de erro.
 
   A essa altura você talvez já tenha provocado um erro para ver o que acontece. Vamos fazer isso agora, e aprender a ler as mensagens resultantes. Pode parecer perda de tempo, mas é importantíssimo saber interpretar as mensagens de erro porque a melhor forma de aprender a programar é experimentando, e ao experimentar você certamente vai provocar muitos erros.
 
@@ -200,7 +200,7 @@ Aqui nós criamos uma lista de preços na memória do computador e associamos o 
     >>>
 
 
-Aqui nós instruímos o interpretador a fazer os seguintes passos:
+Aqui instruímos o interpretador a fazer os seguintes passos:
 
 - para cada item sucessivo da ``lista``:
     - associe o nome ``p`` ao item da vez
@@ -209,18 +209,24 @@ Aqui nós instruímos o interpretador a fazer os seguintes passos:
 Agora digamos que você tem discos com valores de 4 a 15 dólares. Você poderia digitar a lista de novo, mas a coisa começa a ficar repetitiva novamente. Há uma forma melhor. A linguagem Python possui uma palavra chamada ``range`` que serve para gerar faixas de números. Vamos usar essa palavra. Digite::
 
     >>> range
-    <built-in function range>
+    <class 'range'>
     >>>
 
-Quando você digita o nome de uma função sem fornecer dados, Python limita-se a dizer a que se refere o nome. Nesse caso: ``built-in function range``, ou função embutida ``range``. Isso quer dizer que a palavra ``range`` é o nome de uma função, um tipo de comando que produz resultados a partir de dados fornecidos. E trata-se ainda de uma função embutida, ou seja, incluída no próprio interpretador (a maioria das funções da linguagem Python não são embutidas, mas fazem parte de módulos que o programador precisa chamar explicitamente; isso será explicado depois).
+Quando você digita o nome de uma função sem fornecer dados, Python limita-se a dizer a que se refere o nome. Nesse caso: ``class 'range'``, ou classe ``range``. Isso quer dizer que a palavra ``range`` é o nome de uma classe, um tipo de objeto que produz outros objetos a partir de dados fornecidos, como se fosse uma fábrica.
 
-Acabamos de dizer que uma função "produz resultados a partir de dados fornecidos", então vamos fornecer algum dado para ver que resultados a função range produz. Digite ``range(5)`` e veja o que acontece::
+Acabamos de dizer que uma classe "produz objetos a partir de dados fornecidos", então vamos fornecer algum dado para ver o que a classe range produz. Digite ``range(5)`` e veja o que acontece::
 
     >>> range(5)
+    range(0, 5)
+    >>>
+
+Quando apenas um dado N é fornecido, ``range`` produz um gerador para N números, de zero até N-1. Um gerador é um objeto que produz valores sob demanda. Para ver o que esse gerador produz, vamos construir uma lista com ele:
+
+    >>> list(range(5))
     [0, 1, 2, 3, 4]
     >>>
 
-Quando apenas um dado N é fornecido, ``range`` gera uma lista de N números, de zero até N-1. É um comportamento um pouco estranho, mas útil em programação (o primeiro item de uma série, em Python e na maioria das linguagens, é o item número zero; isso será discutido mais profundamente quando aprendermos mais sobre listas).
+É um comportamento um pouco estranho, mas útil em programação (o primeiro item de uma série, em Python e na maioria das linguagens, é o item número zero; isso será discutido mais profundamente quando aprendermos mais sobre listas).
 
 Agora digamos que eu queira uma sequência a partir de 2, e não zero. Digite::
 

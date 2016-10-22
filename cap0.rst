@@ -11,14 +11,12 @@ Antes de começar, apenas um aviso: o prazer de construir um programa pode causa
 Material necessário
 ====================
 
-Para acompanhar esse tutorial você precisará de um computador que tenha um interpretador da linguagem Python instalado. Em quase todas as versões modernas de Linux e MacOS X o interpretador Python já vem instalado (experimente abrir um terminal e digitar "python"). Na página http://www.python.org/download/ você encontra links para baixar o interpretador adequado para o seu computador.
-
-.. todo:: Python 3!!!
+Para acompanhar esse tutorial você precisará de um computador que tenha um interpretador da linguagem Python instalado. Em quase todas as versões modernas de Linux e MacOS X o interpretador Python já vem instalado (experimente abrir um terminal e digitar "python"). Nesse tutorial, vamos usar Python 3. Na página http://www.python.org/download/ você encontra links para baixar a versão mais recente do Python 3 para o seu computador. Em novembro de 2016 a versão mais recente é Python 3.5, mas qualquer versão da série 3.x deverá funcionar para você.
 
 Porquê Python
 ==============
 
-Toda programação de computadores é feita através de linguagens de programação, portanto é para aprender a programar é preciso aprender uma dessas linguagens. Nossa meta não é mostrar como se programa em uma linguagem específica, mas sim como se programa de uma forma geral. Ou seja, a linguagem para nós será um veículo, e não o destino. Mesmo assim, pensamos bastante antes de escolher uma linguagem para este tutorial, e optamos por Python.
+Toda programação de computadores é feita através de linguagens de programação, portanto para aprender a programar é preciso aprender uma dessas linguagens. Nossa meta não é mostrar como se programa em uma linguagem específica, mas sim como se programa de uma forma geral. Ou seja, a linguagem para nós será um veículo, e não o destino. Mesmo assim, pensamos bastante antes de escolher uma linguagem para este tutorial, e optamos por Python.
 
 Centenas de linguagens foram criadas desde que o computador eletrônico foi inventado nos anos 40. Algumas já são línguas mortas. Outras, como C++ e Java, são peças fundamentais no desenvolvimento da economia digital. No entanto, a complexidade dessas duas linguagens nos motivou a descartá-las, e focalizar o universo das chamadas linguagens de "''scripting''", que são mais simples e se prestam a um estilo de programação exploratória, mais sintonizado com a ideia de tornar a programação acessível.
 
